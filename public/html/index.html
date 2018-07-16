@@ -1,0 +1,46 @@
+<html ng-cloak ng-app="myApp">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title  ></title> 
+
+ 
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="./js/bootstrap.min.css">  
+    <!--JS START-->
+</head>
+<body style="position: relative;" >
+
+
+<div ng-view ></div>
+ 
+<script src="/socket.io/socket.io.js"></script> 
+<script src="./js/angular.min.js"></script> 
+<script src="./js/angular-route.min.js"></script> 
+<script src="./js/app.js"></script>
+<script src="./js/controller.js"></script> 
+<script src="./js/homeController.js"></script> 
+
+ <style>
+     body{
+            background:#f7f4f4 !important
+        }
+        .header{
+            padding:10px;
+            box-shadow:1px 1px 1px #ddd;
+            float:left;
+            width:100%; 
+            background: #fff
+        }
+        .card{
+            padding:10px; 
+            background: #fff;
+            box-shadow:1px 1px 1px #ddd;
+            margin-top:10px;
+            float: left;
+    width: 100%;
+
+        }
+</style>
+</body>
+</html>

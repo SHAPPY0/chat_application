@@ -1,0 +1,66 @@
+<div class="container">
+
+<div class="row"> 
+
+<div class="col-md-6">
+		<form name="userRegForm">
+<div style="padding: 40px; border:1px solid #ccc; margin:40px">
+	<label>Registration</label><hr/>
+<p ng-show="successAlert" style="color:green" class="alert alert-success">{{regSuccess.msg}}</p>
+<p ng-show="regFail" style="color:red" class="alert alert-danger">{{regFail.msg}}</p>
+<div class="form-group">
+<lable>First Name*</lable>
+<input type="text" class="form-control" ng-model="newUser.firstname" required />
+</div>
+<div class="form-group">
+<lable>Last Name*</lable>
+<input type="text" class="form-control" ng-model="newUser.lastname" required/>
+</div>
+<div class="form-group">
+<lable>Email*</lable>
+<input type="text" class="form-control" ng-model="newUser.email" required />
+</div>
+<div class="form-group">
+<lable>Password*</lable>
+<input type="password" class="form-control" ng-model="newUser.password" required />
+</div> 
+<div class="form-group">
+<lable>Mobile*</lable>
+<input type="text" class="form-control" ng-model="newUser.mobile" required/>
+</div>
+<div class="form-group">
+<lable>Type*</lable>
+<select class="form-control" ng-model="newUser.type" required>
+	<option value="" style="display: none">--Select User Type--</option>
+	<option value="0">Admin</option>
+	<option value="1">Doctor</option>
+	<option value="2">Patient</option>
+</select>
+<small>*Note: Admin option will not be visible in this dropdown. </small>
+</div>
+<div class="form-group text-center">
+<button class="btn btn-primary" type="submit" ng-click="registerUser()">Register</button>
+</div>
+</div>
+</form>
+</div> 
+
+<div class="col-md-6">
+	<div style="border:1px solid #ccc; padding:40px; margin:40px">
+			<label>Login</label><hr/>
+	<form name="loginForm">
+			<div class="form-group">
+					<lable>Email*</lable>
+						<input type="email" class="form-control" ng-model="login.email" required />
+					</div>
+					<div class="form-group">
+					<lable>Password*</lable>
+					  	<input type="password" class="form-control" ng-model="login.password" required />
+					</div>
+
+					<button class="btn btn-primary" type="submit" ng-click="loginUser()">Login</button>
+	</form>
+	</div>
+</div>
+
+</div>

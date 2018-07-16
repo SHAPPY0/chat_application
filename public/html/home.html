@@ -1,0 +1,97 @@
+
+<div class="header">
+    <div class="container">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">Welcome, {{loggedInUsre.firstname}}</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="col-md-6">
+            <div class="card" ng-hide="loggedInUsre.type=='1'">
+                <label ng-if="loggedInUsre.type=='2' || loggedInUsre.type=='0'">Doctors</label>
+                <label ng-if="loggedInUsre.type=='1'">Patients</label>
+                <hr /> 
+                <ul>
+                    <li ng-repeat="x in usersData.data" ng-if="x.type=='1'">
+                        <strong>{{x.firstname}} {{x.lastname}}</strong><br />
+                        <p style="font-size:12px"><a href="javascript:void(0)" ng-click="viewProfile(x)">View Profile</a>&nbsp;&nbsp;
+                   </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card" ng-hide="loggedInUsre.type=='2'"> 
+                <label ng-if="loggedInUsre.type=='2' ">Doctors</label>
+                <label ng-if="loggedInUsre.type=='1' || loggedInUsre.type=='0' ">Patients</label>
+                <hr /> 
+                <ul>
+                    <li ng-repeat="x in usersData.data" ng-if="x.type=='2'">
+                        <strong>{{x.firstname}} {{x.lastname}}</strong><br />
+                        <p style="font-size:12px"><a href="javascript:void(0)" ng-click="viewProfile(x)">View Profile</a>&nbsp;&nbsp;
+                   </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="width: 45%;
+position: absolute;
+bottom: 0px;
+right: 0px;">
+    <form ng-submit="chatFrom(toSocket)"> 
+    <div class='col-md-8'>
+        <div ng-hide='privateChatOn'>
+        <div class="secctionHeader"><b>Chat</b></div>
+        <div class="bg">
+            <ul id="list">
+            </ul>
+            <div style="clear: both; width:100%"></div>
+            <p style="color: #a09f9f;font-size:12px" ng-show="isTyping">{{typ}} is typing...</p>
+        </div>
+        <div class="hyuf">
+        <div >
+            <div style="display:flex">
+                <input type="text" style="width:80%" class="form-control" placeholder="Type message here." ng-model="msg" ng-change='msgTyping()' />
+
+                <button type="submit" style="width:20%" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+        </div>
+    </div> 
+    </div>
+    <div class='col-md-4'></div>
+    </form>
+</div>
+<style>
+        .secctionHeader{    background: #6b6e71;
+        color: #fff;
+        padding: 5px;}
+        .nickwrap{ width: 300px;
+            margin: 30px auto;
+            padding: 10px;
+        }
+    
+        .bg{background:#eee; height:350px; padding:10px;overflow: auto;}
+        ul{padding:0;}
+        li{list-style: none; padding:5px;     width: 400px;
+            background: #fff;
+            height: auto;
+            border-radius: 3px;
+            margin-bottom: 5px; position: relative; width: 100%;}
+         li span{float:right;
+            font-size: 9px;
+            color: #b5b2b2;
+            top: 15px;}
+        .users li{padding:2px !important; color:#ddd !important;}
+        li div{    color: #6fd2e8;
+        font-size: 11px;}
+        .msgOwner{float: right;
+        background: #347ab7;
+        color: #fff;}
+        .msgforSee{float:left;}
+    </style>
