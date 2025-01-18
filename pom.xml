@@ -37,6 +37,24 @@
       <version>${javafx.version}</version>
 
     </dependency>
+    <dependency>
+
+      <groupId>org.postgres</groupId>
+
+      <artifactId>javafx-controls</artifactId>
+
+      <version>20.102</version>
+
+    </dependency>
+    <dependency>
+
+      <groupId>org.jing</groupId>
+
+      <artifactId>javafx-controls</artifactId>
+
+      <version>10.102</version>
+
+    </dependency>
 
   </dependencies>
 
