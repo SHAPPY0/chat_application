@@ -10,7 +10,7 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>${javafx.version}</version>
+      <version>19.2.0</version>
     </dependency>
     <dependency>
       <groupId>org.springboot</groupId>
@@ -31,8 +31,8 @@
     </plugins>
   </build>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <javafx.version>21</javafx.version>
     <javafx.maven.plugin.version>1.0.8</javafx.maven.plugin.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <javafx.version>23</javafx.version>
   </properties>
 </project>
