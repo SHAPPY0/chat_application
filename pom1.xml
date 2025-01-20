@@ -17,6 +17,11 @@
       <artifactId>maven</artifactId>
       <version>${javafx.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.xmlfast</groupId>
+      <artifactId>xml-parser</artifactId>
+      <version>1.0.0</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
