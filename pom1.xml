@@ -12,16 +12,6 @@
       <artifactId>javafx-controls</artifactId>
       <version>19.2.0</version>
     </dependency>
-    <dependency>
-      <groupId>org.springboot</groupId>
-      <artifactId>maven</artifactId>
-      <version>${javafx.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.xmlfast</groupId>
-      <artifactId>xml-parser</artifactId>
-      <version>1.0.0</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
