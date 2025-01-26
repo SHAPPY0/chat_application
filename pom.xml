@@ -10,7 +10,7 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>19.2.1</version>
+      <version>19.2.12</version>
     </dependency>
     <dependency>
       <groupId>org.springboot</groupId>
