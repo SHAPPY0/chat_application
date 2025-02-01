@@ -31,7 +31,7 @@
     </plugins>
   </build>
   <properties>
-    <javafx.version>23166</javafx.version>
+    <javafx.version>231</javafx.version>
     <javafx.maven.plugin.version>1.3.11</javafx.maven.plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
